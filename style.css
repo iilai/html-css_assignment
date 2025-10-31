@@ -1,5 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+}
+
+header {
+    background-color: saddlebrown;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:active {
+    color: lightgray;
+}
+
+.section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section h1 {
+    color: saddlebrown;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.cat-img {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.cat-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#home {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: block;
+}
+
+#home h1 {
+    display: block;
+}
+
+#home .cat-img {
+    float: left;
+    margin: 0 2rem 1rem 0;
+    width: 40%;
+}
+
+#home .cat-img img {
+    width: 100%;
+    height: auto;
+}
+
+#home p {
+    text-align: left;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.cat-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+section#products .cat-img + p {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-weight: bold;
+}
+
+.cat-images article {
+    background-color: lightgray;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.cat-images h2 {
+    color: saddlebrown;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.cat-images img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+section#products .cat-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #666;
+}
+
+.cat-images p {
+    color: black;
+    font-size: 1rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-info {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: darkgray;
+}
+
+.map img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: black;
     color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .cat-images {
+        grid-template-columns: 1fr;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav {
+        gap: 1rem;
+    }
+    #home .cat-img {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
 }
